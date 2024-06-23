@@ -1,0 +1,64 @@
+---
+import { getCollection } from "astro:content"
+import { sortPostsByDate } from "../lib/date"
+import Link from "../components/Link.vue"
+import Base from "../layouts/Base.astro"
+import Project from "../components/Project.astro"
+import PostRow from "../components/PostRow.astro"
+import { getProjects } from "../lib/projects"
+
+// const projects = await getProjects(6)
+const projects = await getProjects()
+const posts = sortPostsByDate(
+  await getCollection("blog", ({ data }) => data.isDraft !== true),
+).slice(0, 4)
+
+const title = "Ronit • home";
+---
+
+<Base
+  {title}
+  description="Personal website and blog of Ronit Raj."
+>
+  <h1 slot="header-content" class="text-neutral-500">
+    Ronit
+  </h1>
+
+  <main class="prose">
+    <p>
+      
+
+      Hi there, I'm <strong>Ronit Raj</strong>. I'm an
+      13 y/o full stack developer with a passion for <strong>building things</strong> and <strong
+        >shuffling cards</strong
+      >. I enjoy <strong
+        >web designing</strong
+      >, <strong>web development</strong> and I live on the <strong
+        >terminal</strong
+      >.
+    </p>
+
+<p>
+  I'm currently working at <strong><a target="_blank" href="https://techkareer.com" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Techkareer</a></strong>, as a SWE intern. I'm also working on a project called <strong><a target="_blank" href="https://x.com/ronitrajfr/status/1803833714650079515" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Mailix</a></strong> in <strong>n&w s5</strong>.
+  Previously I developer <strong><a target="_blank" href="https://preve.onrender.com" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Preve</a></strong> and <strong><a href="https://procise.zerops.xyz" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Procise</a></strong> which have gathered over 70 users.
+</p>
+
+    <div class="mt-12"></div>
+    <h2>Projects</h2>
+
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+      {projects.map(project => <Project {project} />)}
+    </div>
+
+    <div class="mt-12"></div>
+    <h2>Blog</h2>
+
+    <div class="flex flex-col gap-4">
+      {posts.map(post => <PostRow {post} />)}
+
+      <span>
+        <Link href="/blog">All posts →</Link>
+      </span>
+    </div>
+  </main>
+</Base>
