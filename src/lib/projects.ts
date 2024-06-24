@@ -17,8 +17,8 @@ export async function getProjects(): Promise<Project[]> {
       description: "An AI powered PDF summarizer",
     },
     {
-      repo: "ronitraj.xyz",
-      link: "https://github.com/ronitrajfr/ronitraj.xyz",
+      repo: "ronitt.xyz",
+      link: "https://github.com/ronitrajfr/ronitt.xyz",
       description: "personal site built with Astro",
     },
     {
