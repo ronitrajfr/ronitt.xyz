@@ -9,7 +9,7 @@ import unocss from "unocss/astro";
 import vesper from "./src/lib/vesper.json";
 
 export default defineConfig({
-  site: "https://ronitfr.vercel.app",
+  site: "https://www.ronitt.xyz/",
   adapter: vercel(),
   output: "hybrid",
   integrations: [
