@@ -81,6 +81,12 @@ bunx wrangler whoami
 ```
 if it shows your email, then you have successfully logged in.
 
+
+Make sure to add this line to your page.tsx file inside app directory.
+```js
+export const runtime = "edge";
+```
+
 and then simply deploy it by running:
 
 ```bash
@@ -120,11 +126,6 @@ After login, write this command to see if you have successfully logged in or not
 bunx wrangler whoami 
 ```
 if it shows your email, then you have successfully logged in.
-
-Make sure to add this line to your page.tsx file inside app directory.
-```js
-export const runtime = "edge";
-```
 
 and then simply deploy it by running:
 
