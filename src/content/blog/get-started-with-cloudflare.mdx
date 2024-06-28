@@ -1,0 +1,135 @@
+---
+title: "Get started with Cloudflare"
+description: "All you need to know to get started with Cloudflare"
+date: "June 29, 2024"
+---
+
+import Link from "../../components/Link.vue";
+import Code from "../../components/Code.vue";
+import { createHeading } from "../../components/Heading";
+
+export const components = {
+  a: Link,
+  code: Code,
+  h1: createHeading("h1"),
+  h2: createHeading("h2"),
+  h3: createHeading("h3"),
+};
+
+## What this blog is all about?
+This blog is about how to get started with cloudflare workers using hono and how to make next js app using cloudflare pages.
+
+## What is Cloudflare?
+Cloudflare is a content delivery network (CDN) that provides
+a global network of servers to deliver your website's
+content to users around the world. It is a free service 
+that offers a range of features, including DDoS protection, 
+DDoS mitigation, and performance optimization.
+
+![Cloudflare](/images/cloudflare/cfog.png)
+
+## Why use Cloudflare?
+Cloudflare is a popular choice for websites and web applications
+because of its many benefits. Some of the key advantages of 
+using Cloudflare include:
+- Security: Cloudflare also provides security by protecting Internet properties from malicious activity like DDoS attacks, malicious bots, and other nefarious intrusions.
+- Performance optimization: Cloudflare's performance optimization service helps optimize your website's performance by analyzing your website's traffic and identifying areas for improvement.  
+- Speed: It runs on edge servers that provides content and other services as close to you as possible, so you get the information as fast as possible which can significantly improve website speed and load times.
+
+## Get started!
+To get started, go to [cloudflare](https://dash.cloudflare.com/sign-up) and make a account there. 
+
+Once you've signed up, go to the terminal and create a new folder and cd into your folder.
+```bash
+mkdir my-website
+cd my-website
+```
+
+After creating the folder, run the following
+command in the terminal to signin and setup
+ cloudflare worker with hono.
+
+## Next js with the power of cloudflare
+```bash
+bun create cloudflare@latest
+```
+Enter your project name and then select **Website or web app**`
+![1st](/images/cloudflare/1st.png)
+
+After that, you will be asked to select the framework. We are going to use use next js.
+![4th](/images/cloudflare/4th.png)
+
+Then, you need to configure you next js app. After setting up your next js app, select yes for **next-on-pages eslint-plugin**.
+Then, you will be asked if you want to deploy your app. Select **No** for now. I will teach you how to deploy it later.
+
+#### Run the development server.
+```bash
+cd your-worker-name
+bun dev
+```
+
+#### Deploy your app.
+
+Firstly, you need to login to your cloudflare account through the terminal if you haven't. For that, run:
+```bash
+bunx wrangler login
+```
+
+After login, write this command to see if you have successfully logged in or not.
+```bash
+bunx wrangler whoami 
+```
+if it shows your email, then you have successfully logged in.
+
+and then simply deploy it by running:
+
+```bash
+bun wrangler deploy
+```
+
+
+
+
+## Get started with cloudflare workers :D
+```bash
+bun create cloudflare@latest
+```
+Enter your project name and then select **Website or web app**`
+![1st](/images/cloudflare/1st.png)
+
+After that, you will be asked to select the framework. We are going to use use hono.
+![2nd](/images/cloudflare/2nd.png)
+
+Then, you will be asked if you want to deploy your app. Select **No** for now. I will teach you how to deploy it later.
+
+#### Run the development server.
+```bash
+cd your-worker-name
+bun dev
+```
+
+#### Deploy your app.
+
+Firstly, you need to login to your cloudflare account through the terminal if you haven't. For that, run:
+```bash
+bunx wrangler login
+```
+
+After login, write this command to see if you have successfully logged in or not.
+```bash
+bunx wrangler whoami 
+```
+if it shows your email, then you have successfully logged in.
+
+Make sure to add this line to your page.tsx file inside app directory.
+```js
+export const runtime = "edge";
+```
+
+and then simply deploy it by running:
+
+```bash
+bun wrangler deploy
+```
+
+~ Thank you!
