@@ -26,6 +26,22 @@
     {
       "source": "/gh/:slug*",
       "destination": "https://github.com/ronitrajfr/:slug*"
+    },
+    {
+      "source": "/twitter",
+      "destination": "https://x.com/ronitrajfr"
+    },
+    {
+      "source": "/x",
+      "destination": "https://x.com/ronitrajfr"
+    },
+    {
+      "source": "/mail",
+      "destination": "mailto:ronitrajofficial@gmail.com"
+    },
+    {
+      "source": "/code",
+      "destination": "https://discord.gg/6n5GMakY"
     }
   ]
 }
