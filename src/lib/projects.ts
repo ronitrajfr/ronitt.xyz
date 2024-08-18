@@ -26,6 +26,16 @@ export async function getProjects(): Promise<Project[]> {
       link: "https://github.com/ronitrajfr/procise",
       description: "An AI powered hackernews comments summarizer",
     },
+    {
+      repo:"anonGPT",
+      link: "https://github.com/ronitrajfr/anonGPT",
+      description: "Fast and accurate information retrieval, no more endless searching.",
+    },
+    {
+      repo:"askReddit",
+      link: "https://x.com/ronitrajfr/status/1823619565148156384",
+      description: "get result from your fav site instantly alongside google search results",
+    }
    
   ];
 }
