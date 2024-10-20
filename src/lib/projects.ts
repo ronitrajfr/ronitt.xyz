@@ -14,7 +14,7 @@ export async function getProjects(): Promise<Project[]> {
     {
       repo: "Preve",
       link: "https://github.com/ronitrajfr/preve",
-      description: "An AI powered PDF summarizer",
+      description: "An AI powered PDF summarizer.",
     },
   
     {
@@ -23,14 +23,9 @@ export async function getProjects(): Promise<Project[]> {
       description: "Fast and accurate information retrieval, no more endless searching.",
     },
     {
-      repo: "Celing",
-      link: "https://github.com/ronitrajfr/celing",
-      description: "CLI that adds license in your project right from your terminal",
-    },
-    {
-      repo: "Procise",
-      link: "https://github.com/ronitrajfr/procise",
-      description: "An AI powered hackernews comments summarizer",
+      repo: "Postbox",
+      link: "https://github.com/ronitrajfr/postbox",
+      description: "An open-source tool designed specifically for testing APIs.",
     },
     {
       repo: "Clave",
@@ -38,10 +33,35 @@ export async function getProjects(): Promise<Project[]> {
       description: "Fun coding quiz! Test your skills and compete with friends!",
     },
     {
+      repo: "Celing",
+      link: "https://github.com/ronitrajfr/celing",
+      description: "CLI that adds license in your project right from your terminal.",
+    },
+
+    {
+      repo: "Procise",
+      link: "https://github.com/ronitrajfr/procise",
+      description: "An AI powered hackernews comments summarizer.",
+    },
+   
+    {
       repo:"askReddit",
       link: "https://x.com/ronitrajfr/status/1823619565148156384",
-      description: "get result from your fav site instantly alongside google search results",
+      description: "get result from your fav site instantly alongside google search results.",
     },
+     
+    {
+      repo:"Apple",
+      link: "https://github.com/ronitrajfr/apple",
+      description: "Animated Apple website UI clone with responsive layout and dynamic features.",
+    },
+    {
+      repo:"Robust",
+      link: "https://github.com/ronitrajfr/robust",
+      description: "Game coins transaction: Send or receive coins from other users."
+    },
+
+    
 
    
   ];
