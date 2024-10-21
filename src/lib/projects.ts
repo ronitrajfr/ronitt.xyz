@@ -60,9 +60,16 @@ export async function getProjects(): Promise<Project[]> {
       link: "https://github.com/ronitrajfr/robust",
       description: "Game coins transaction: Send or receive coins from other users."
     },
+    {
+      repo:"CivicNet",
+      link: "https://github.com/ronitrajfr/civicnet",
+      description: "This is a hackathon project. Report issues, get solutions – swiftly."
+    },
+    {
+      repo:"Narrify",
+      link: "https://github.com/ronitrajfr/narrify",
+      description: "Blogging site made using hono, cloudflare workers and vite."
+    },
 
-    
-
-   
   ];
 }
