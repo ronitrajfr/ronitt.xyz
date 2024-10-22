@@ -14,7 +14,7 @@ export async function getProjects(): Promise<Project[]> {
     {
       repo: "Preve",
       link: "https://github.com/ronitrajfr/preve",
-      description: "An AI powered PDF summarizer.",
+      description: "Drop your PDFs into Preve for summaries, key points, details, and questions.",
     },
   
     {
