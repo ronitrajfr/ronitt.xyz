@@ -33,6 +33,11 @@ export async function getProjects(): Promise<Project[]> {
       description: "Fun coding quiz! Test your skills and compete with friends!",
     },
     {
+      repo: "roastify",
+      link: "https://idea-roast-frontend.pages.dev",
+      description: "Roastify is a site that roasts your startup idea mercilessly.",
+    },
+    {
       repo: "Celing",
       link: "https://github.com/ronitrajfr/celing",
       description: "CLI that adds license in your project right from your terminal.",
