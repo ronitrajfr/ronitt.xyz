@@ -12,6 +12,11 @@ export type Project = z.infer<typeof projectSchema>;
 export async function getProjects(): Promise<Project[]> {
   return [
     {
+      repo: "Travelshare",
+      link: "https://github.com/ronitrajfr/travelshare",
+      description: "A place where you can share unexplored places with stunning photos and precise locations.",
+    },
+    {
       repo: "Preve",
       link: "https://github.com/ronitrajfr/preve",
       description: "Drop your PDFs into Preve for summaries, key points, details, and questions.",
