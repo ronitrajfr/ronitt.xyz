@@ -25,7 +25,6 @@ else href = "/"
 
 <html lang="en">
   <head>
-    <ViewTransitions transition:animate={fade({duration: "0.2s"})} />
 
     <!-- global metadata -->
     <meta charset="utf-8" />
@@ -157,6 +156,10 @@ html {
 
 * {
   @apply outline-white selection-(bg-neutral-700 text-white)
+}
+
+h3 {
+  @apply text-neutral-100 font-semibold 
 }
 
 body {

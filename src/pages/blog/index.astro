@@ -7,6 +7,7 @@ import Base from "../../layouts/Base.astro"
 const posts = sortPostsByDate(await getCollection("blog", ({ data }) => data.isDraft !== true))
 
 const title = "Ronit • blog"
+
 ---
 
 <Base
@@ -14,7 +15,10 @@ const title = "Ronit • blog"
   description="Ronit Raj is a full stack developer with a passion for building things and shuffling cards. This is his personal website and here's some of the blog posts of him."
 >
   <main class="prose">
-    <h1>Blog</h1>
+    <p class="text-4xl mb-4 pt-7 text-white  font-semibold">
+      <span class="text-[#ff6b35]">*</span>
+      <span  id="scrambleText">Blogs</span>
+    </p>
 
     <div class="my-8" />
 
@@ -23,3 +27,42 @@ const title = "Ronit • blog"
     </div>
   </main>
 </Base>
+
+
+<script>
+  const characters = 'abcdefghijklmnopqrstuvwxyz'
+  const scrambleText = document.getElementById('scrambleText')
+  const originalText = scrambleText?.textContent || ''
+  const scrambleDelay = 2000
+  const updateInterval = 50
+
+  function scramble() {
+    if (!scrambleText) return
+    
+    let iterations = 0
+    const maxIterations = 10
+
+    const interval = setInterval(() => {
+      scrambleText.textContent = originalText
+        .split('')
+        .map((char, idx) => {
+          if (char === ' ') return ' '
+          if (idx < iterations) return originalText[idx]
+          return characters[Math.floor(Math.random() * characters.length)]
+        })
+        .join('')
+
+      iterations += 1/3
+
+      if (iterations >= maxIterations) {
+        clearInterval(interval)
+        scrambleText.textContent = originalText
+      }
+    }, updateInterval)
+  }
+
+  // Initial scramble
+  scramble()
+
+  // Periodic scramble
+</script>
