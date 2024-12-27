@@ -21,6 +21,7 @@
     "@astrojs/vue": "^4.0.10",
     "@loglib/tracker": "^0.8.0",
     "astro": "^4.16.7",
+    "lucide-react": "^0.469.0",
     "markdown-it": "^13.0.2",
     "sanitize-html": "^2.11.0",
     "solid-js": "^1.8.7",

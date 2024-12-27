@@ -1,11 +1,33 @@
 ---
 const links = [
-    { href: "/blog", label: "blog" },
-]
+  { href: "/", label: "[h] home", key: "h" },
+  { href: "/projects", label: "[p] projects", key: "p" },
+  { href: "/blog", label: "[b] blog", key: "b" },
+];
 ---
 
-<div class="flex gap-x-4 text-neutral-500 ">
-    {links.map(link => (
-        <a href={link.href} target="_self" class="hover:(underline underline-offset-4 transition-transform)">{link.label}</a>
-    ))}
+<div class="flex gap-x-4 text-neutral-500">
+  {links.map(link => (
+    <a 
+      href={link.href} 
+      target="_self" 
+      class="hover:text-[#ff6b35] transition-all duration-300 ease-in-out tracking-wide navbarlink text-[#d1d5db]">
+      {link.label}
+    </a>
+  ))}
 </div>
+
+<script>
+  const keyMap: Record<string, string> = {
+    "h": "/",
+    "p": "/projects",
+    "b": "/blog",
+  };
+
+  document.addEventListener("keydown", (event: KeyboardEvent) => {
+    if (event.key in keyMap) {
+      window.location.href = keyMap[event.key];
+    }
+  });
+</script>
+

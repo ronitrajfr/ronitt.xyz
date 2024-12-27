@@ -6,7 +6,7 @@ import Base from "../layouts/Base.astro"
 import Project from "../components/Project.astro"
 import PostRow from "../components/PostRow.astro"
 import { getProjects } from "../lib/projects"
-
+import {LocateIcon} from "lucide-react"
 // const projects = await getProjects(6)
 const projects = await getProjects()
 const posts = sortPostsByDate(
@@ -20,29 +20,33 @@ const title = "Ronit • home";
   {title}
   description="Ronit Raj is a full stack developer with a passion for building things and solving problems. This is his personal website and some blog posts."
 >
-  <h1 slot="header-content" class="text-neutral-500">
-    Ronit
-  </h1>
+
 
   <main class="prose">
-    <p>
-      <small class="text-neutral-500"
-        >do epic shit</small
-      >
-      <br />
 
-      Hi there, I'm <strong>Ronit Raj</strong>. I'm an
-      14 y/o full stack developer with a passion for <strong>building things</strong> and <strong
-        >shuffling cards</strong
-      >. I enjoy <strong> web development</strong> and I live on the <strong
-        >terminal</strong
-      >.
+    <p class="text-3xl mb-4 pt-7 text-white  font-semibold" id="scrambleText">Ronit Raj</p>
+
+
+    <p>
+      Hello, I'm a 14 y/o programmer based in India. I enjoy being around <strong>tech</strong> and am currently into <strong>web development</strong> 
+      while learning <strong>Golang</strong> on the side. If I'm not coding, I'm probably hanging out in discord server, binge watching, or playing games.      
     </p>
 
-<p>
-    I'm working on a project called <strong><a target="_blank" href="https://x.com/ronitrajfr/status/1803833714650079515" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Mailix</a></strong> in <strong>n&w s5</strong>.
-  Previously, I developed <strong><a target="_blank" href="https://preve.onrender.com" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Preve</a></strong> and <strong><a href="https://anon-gpt.vercel.app" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">anonGPT</a></strong> which have gathered over 100 users.
-</p>
+  
+    <p>
+     
+      At the moment, I'm focusing on <strong><a target="_blank" href="https://travelshare.ronitt.xyz"
+         class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">TravelShare</a></strong>,  
+      which has over 400 users, while also launching small projects along the way.
+      Previously, I developed <strong><a target="_blank" href="https://preve.onrender.com" 
+        class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Preve</a></strong>,  
+      <strong><a target="_blank" href="https://anon-gpt.vercel.app" class="underline 
+        decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">anonGPT</a></strong>,  
+      and <strong><a target="_blank" href="https://postbox-rouge.vercel.app" 
+        class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">PostBox</a></strong>,  
+      which together have around 200 users.  
+  </p>
+  
 
     <div class="mt-12"></div>
     <h2>Projects</h2>
@@ -63,3 +67,48 @@ const title = "Ronit • home";
     </div>
   </main>
 </Base>
+
+<style>
+  ::selection {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  const characters = 'abcdefghijklmnopqrstuvwxyz'
+  const scrambleText = document.getElementById('scrambleText')
+  const originalText = scrambleText?.textContent || ''
+  const scrambleDelay = 2000
+  const updateInterval = 50
+
+  function scramble() {
+    if (!scrambleText) return
+    
+    let iterations = 0
+    const maxIterations = 10
+
+    const interval = setInterval(() => {
+      scrambleText.textContent = originalText
+        .split('')
+        .map((char, idx) => {
+          if (char === ' ') return ' '
+          if (idx < iterations) return originalText[idx]
+          return characters[Math.floor(Math.random() * characters.length)]
+        })
+        .join('')
+
+      iterations += 1/3
+
+      if (iterations >= maxIterations) {
+        clearInterval(interval)
+        scrambleText.textContent = originalText
+      }
+    }, updateInterval)
+  }
+
+  // Initial scramble
+  scramble()
+
+  // Periodic scramble
+</script>
