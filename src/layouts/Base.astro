@@ -1,8 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions"
-import Link from "../components/Link.vue"
-import Footer from "../components/Footer.astro"
-import { fade } from "astro:transitions"
 import Navbar from "../components/Navbar.astro"
 
 type Props = {
@@ -81,9 +77,6 @@ else href = "/"
       </header>
 
       <slot />
-
-      <div class="mt-24" />
-      <Footer />
     </div>
   </body>
 </html>

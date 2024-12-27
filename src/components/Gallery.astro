@@ -1,0 +1,27 @@
+---
+// components/Gallery.astro
+import { Image } from 'astro:assets';
+
+const images = [
+  { src: '/images/image1forportfolio.webp', alt: 'Description of image 1' },
+  { src: '/images/image2forportfolio.webp', alt: 'Description of image 2' },
+  { src: '/images/photo3forportfolio.webp', alt: 'Description of image 3' },
+  { src: '/images/photo4forportfolio.webp', alt: 'Description of image 4' },
+  { src: '/images/image5forportfolio.webp', alt: 'Description of image 5' },
+  { src: '/images/photo6forportfolio.webp', alt: 'Description of image 6' },
+];
+---
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+  {images.map((image) => (
+    <div class="aspect-square overflow-hidden rounded-lg">
+      <Image 
+        src={image.src} 
+        alt={image.alt} 
+        width={300} 
+        height={300} 
+        class="object-cover w-full h-full hover:scale-110 transition-transform duration-300"
+      />
+    </div>
+  ))}
+</div>
