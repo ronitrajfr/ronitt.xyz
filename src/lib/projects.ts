@@ -22,33 +22,31 @@ export async function getProjects(): Promise<Project[]> {
       description: "A place where you can share unexplored places with stunning photos and precise locations.",
     },
     {
-      repo: "Preve",
-      link: "https://github.com/ronitrajfr/preve",
-      description: "Drop your PDFs into Preve for summaries, key points, details, and questions.",
-    },
-  
-    {
-      repo:"anonGPT",
-      link: "https://github.com/ronitrajfr/anonGPT",
-      description: "Fast and accurate information retrieval, no more endless searching.",
-    },
-    {
       repo: "Postbox",
       link: "https://github.com/ronitrajfr/postbox",
       description: "An open-source tool designed specifically for testing APIs.",
+    },
+       {
+      repo: "http-server",
+      link: "https://github.com/ronitrajfr/http-server",
+      description: "HTTP server implementation handles basic HTTP requests. ",
+    },
+        {
+      repo: "Rtop",
+      link: "https://github.com/ronitrajfr/rtop",
+      description: "rtop is alternative to htop(system monitor made in C)",
+    },
+       
+       {
+      repo: "Ronis",
+      link: "https://github.com/ronitrajfr/ronis",
+      description: "Implementation of redis-like server. (todo: adding rdb persistence)",
     },
     {
       repo: "Celing",
       link: "https://github.com/ronitrajfr/celing",
       description: "CLI that adds license in your project right from your terminal.",
     },
-
-    {
-      repo: "Procise",
-      link: "https://github.com/ronitrajfr/procise",
-      description: "An AI powered hackernews comments summarizer.",
-    },
-
   
   ];
 }
