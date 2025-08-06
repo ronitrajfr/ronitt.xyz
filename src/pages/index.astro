@@ -1,18 +1,18 @@
 ---
-import { getCollection } from "astro:content"
-import { sortPostsByDate } from "../lib/date"
-import Link from "../components/Link.vue"
-import Base from "../layouts/Base.astro"
-import Project from "../components/Project.astro"
-import PostRow from "../components/PostRow.astro"
+import { getCollection } from "astro:content";
+import { sortPostsByDate } from "../lib/date";
+import Link from "../components/Link.vue";
+import Base from "../layouts/Base.astro";
+import Project from "../components/Project.astro";
+import PostRow from "../components/PostRow.astro";
 import Gallery from "../components/Gallery.astro";
-import { getProjects } from "../lib/projects"
+import { getProjects } from "../lib/projects";
 
 // const projects = await getProjects(6)
-const projects = await getProjects()
+const projects = await getProjects();
 const posts = sortPostsByDate(
-  await getCollection("blog", ({ data }) => data.isDraft !== true),
-).slice(0, 4)
+  await getCollection("blog", ({ data }) => data.isDraft !== true)
+).slice(0, 4);
 
 const title = "Ronit • home";
 ---
@@ -21,33 +21,32 @@ const title = "Ronit • home";
   {title}
   description="Ronit Raj is a full stack developer with a passion for building things and solving problems. This is his personal website and some blog posts."
 >
-
-
   <main class="prose">
-
- <div class="flex items-center gap-x-1"> 
-  <p class="text-3xl mb-4 pt-7 text-white  font-semibold" id="scrambleText">Ronit Raj</p>
-  <img 
-  style="margin: 0; margin-top:26px;"
-  src={"/gifs/skater-skate.gif"} 
-  alt={"gif"} 
-  class="w-12 h-12 mt-3"
-/>
- </div>
-
-
+    <div class="flex items-center gap-x-1">
+      <p class="text-3xl mb-4 pt-7 text-white font-semibold" id="scrambleText">
+        Ronit Raj
+      </p>
+      <img
+        style="margin: 0; margin-top:26px;"
+        src={"/gifs/skater-skate.gif"}
+        alt={"gif"}
+        class="w-12 h-12 mt-3"
+      />
+    </div>
 
     <p>
-      Hello, I'm a 15 y/o programmer based in India. I enjoy being around <strong>tech</strong> and currently into <strong>web development</strong> 
-      while learning <strong>low level programming</strong> on the side. If I'm not coding, I'm probably hanging out on discord server or binge watching movies.      
+      Hello, I'm a 15 y/o programmer based in India. I enjoy being around <strong
+        >tech</strong
+      > and currently into <strong>web development</strong>
+      while learning <strong>low level programming</strong> on the side. If I'm not
+      coding, I'm probably hanging out on discord server or binge watching movies.
     </p>
-  
 
     <div class="mt-12"></div>
     <h2>Projects</h2>
 
     <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
-      {projects.map(project => <Project {project} />)}
+      {projects.map((project) => <Project {project} />)}
     </div>
 
     <span>
@@ -58,23 +57,50 @@ const title = "Ronit • home";
     <h2>Blog</h2>
 
     <div class="flex flex-col gap-4">
-      {posts.map(post => <PostRow {post} />)}
+      {posts.map((post) => <PostRow {post} />)}
 
       <span>
         <Link href="/blog">All posts →</Link>
       </span>
-
     </div>
 
     <div class="mt-12"></div>
     <h2>Gallery</h2>
     <Gallery />
-      <h2>Socials</h2>
-  
-        <p>Reach out to me via <strong><a target="_blank" href="mailto:ronitrajofficial7@gmail.com" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Email</a></strong> or send me a DM on <strong><a target="_blank" href="https://x.com/ronitrajfr" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Twitter</a></strong>. 
-          Don’t forget to follow me on <strong><a target="_blank" href="https://x.com/ronitrajfr" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Twitter</a></strong>, 
-          <strong><a target="_blank" href="https://github.com/ronitrajfr" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">GitHub</a></strong>
-</p>
+    <h2>Socials</h2>
+
+    <p>
+      Reach out to me via <strong
+        ><a
+          target="_blank"
+          href="mailto:ronitrajofficial7@gmail.com"
+          class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500"
+          >Email</a
+        ></strong
+      > or send me a DM on <strong
+        ><a
+          target="_blank"
+          href="https://x.com/ronitrajfr"
+          class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500"
+          >Twitter</a
+        ></strong
+      >. Don’t forget to follow me on <strong
+        ><a
+          target="_blank"
+          href="https://x.com/ronitrajfr"
+          class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500"
+          >Twitter</a
+        ></strong
+      >,
+      <strong
+        ><a
+          target="_blank"
+          href="https://github.com/ronitrajfr"
+          class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500"
+          >GitHub</a
+        ></strong
+      >
+    </p>
   </main>
 </Base>
 
@@ -86,36 +112,36 @@ const title = "Ronit • home";
 </style>
 
 <script>
-  const characters = 'abcdefghijklmnopqrstuvwxyz'
-  const scrambleText = document.getElementById('scrambleText')
-  const originalText = scrambleText?.textContent || ''
-  const updateInterval = 50
+  const characters = "abcdefghijklmnopqrstuvwxyz";
+  const scrambleText = document.getElementById("scrambleText");
+  const originalText = scrambleText?.textContent || "";
+  const updateInterval = 50;
 
   function scramble() {
-    if (!scrambleText) return
-    
-    let iterations = 0
-    const maxIterations = 10
+    if (!scrambleText) return;
+
+    let iterations = 0;
+    const maxIterations = 10;
 
     const interval = setInterval(() => {
       scrambleText.textContent = originalText
-        .split('')
+        .split("")
         .map((char, idx) => {
-          if (char === ' ') return ' '
-          if (idx < iterations) return originalText[idx]
-          return characters[Math.floor(Math.random() * characters.length)]
+          if (char === " ") return " ";
+          if (idx < iterations) return originalText[idx];
+          return characters[Math.floor(Math.random() * characters.length)];
         })
-        .join('')
+        .join("");
 
-      iterations += 1/3
+      iterations += 1 / 3;
 
       if (iterations >= maxIterations) {
-        clearInterval(interval)
-        scrambleText.textContent = originalText
+        clearInterval(interval);
+        scrambleText.textContent = originalText;
       }
-    }, updateInterval)
+    }, updateInterval);
   }
 
   // Initial scramble
-  scramble()
+  scramble();
 </script>
