@@ -14,17 +14,17 @@ export async function getProjects(): Promise<Project[]> {
     {
       repo: "Ayoni",
       link: "https://github.com/ronitrajfr/ayoni",
-      description: "Open-source web analytics built for modern websites — simple, fast, and easy to use.",
+      description: "web analytics built for modern websites.",
     },
     {
-      repo: "Travelshare",
-      link: "https://github.com/ronitrajfr/travelshare",
-      description: "A place where you can share unexplored places with stunning photos and precise locations.",
+      repo: "rsh",
+      link: "https://github.com/ronitrajfr/rsh",
+      description: "a simple shell made in C from scratch",
     },
     {
-      repo: "Postbox",
-      link: "https://github.com/ronitrajfr/postbox",
-      description: "An open-source tool designed specifically for testing APIs.",
+      repo: "dns-server",
+      link: "https://github.com/ronitrajfr/dns-server",
+      description: "dns server made in golang from scratch",
     },
        {
       repo: "http-server",
@@ -41,11 +41,6 @@ export async function getProjects(): Promise<Project[]> {
       repo: "Ronis",
       link: "https://github.com/ronitrajfr/ronis",
       description: "Implementation of redis-like server. (todo: adding rdb persistence)",
-    },
-    {
-      repo: "Celing",
-      link: "https://github.com/ronitrajfr/celing",
-      description: "CLI that adds license in your project right from your terminal.",
     },
   
   ];

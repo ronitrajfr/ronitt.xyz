@@ -7,8 +7,6 @@ import Project from "../components/Project.astro"
 import PostRow from "../components/PostRow.astro"
 import Gallery from "../components/Gallery.astro";
 import { getProjects } from "../lib/projects"
-import {LocateIcon} from "lucide-react"
-import { Image } from 'astro:assets';
 
 // const projects = await getProjects(6)
 const projects = await getProjects()
@@ -41,23 +39,8 @@ const title = "Ronit • home";
 
     <p>
       Hello, I'm a 15 y/o programmer based in India. I enjoy being around <strong>tech</strong> and currently into <strong>web development</strong> 
-      while learning <strong>Golang</strong> on the side. If I'm not coding, I'm probably hanging out on discord server, binge watching, or playing games.      
+      while learning <strong>low level programming</strong> on the side. If I'm not coding, I'm probably hanging out on discord server or binge watching movies.      
     </p>
-
-  
-    <p>
-     
-      At the moment, I'm focusing on <strong><a target="_blank" href="https://travelshare.ronitt.xyz"
-         class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">TravelShare</a></strong>,  
-      which has over 400 users, while also launching small projects along the way.
-      Previously, I developed <strong><a target="_blank" href="https://preve.onrender.com" 
-        class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Preve</a></strong>,  
-      <strong><a target="_blank" href="https://anon-gpt.vercel.app" class="underline 
-        decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">anonGPT</a></strong>,  
-      and <strong><a target="_blank" href="https://postbox-rouge.vercel.app" 
-        class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">PostBox</a></strong>,  
-      which together have around 200 users.  
-  </p>
   
 
     <div class="mt-12"></div>
@@ -88,8 +71,10 @@ const title = "Ronit • home";
     <Gallery />
       <h2>Socials</h2>
   
-        <p>Reach out to me via <strong><a target="_blank" href="mailto:ronitrajofficial7@gmail.com" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Email</a></strong> or send me a DM on <strong><a target="_blank" href="https://x.com/ronitrajfr" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Twitter</a></strong>. Don’t forget to follow me on <strong><a target="_blank" href="https://x.com/ronitrajfr" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Twitter</a></strong>, <strong><a target="_blank" href="https://github.com/ronitrajfr" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">GitHub</a></strong>, and <strong><a target="_blank" href="https://instagram.com/ronitrajfr" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Instagram</a></strong>!</p>     
-
+        <p>Reach out to me via <strong><a target="_blank" href="mailto:ronitrajofficial7@gmail.com" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Email</a></strong> or send me a DM on <strong><a target="_blank" href="https://x.com/ronitrajfr" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Twitter</a></strong>. 
+          Don’t forget to follow me on <strong><a target="_blank" href="https://x.com/ronitrajfr" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">Twitter</a></strong>, 
+          <strong><a target="_blank" href="https://github.com/ronitrajfr" class="underline decoration-neutral-600 underline-offset-4 transition-colors focus:(decoration-neutral-500 outline-offset-6) hover:decoration-neutral-500">GitHub</a></strong>
+</p>
   </main>
 </Base>
 
@@ -104,7 +89,6 @@ const title = "Ronit • home";
   const characters = 'abcdefghijklmnopqrstuvwxyz'
   const scrambleText = document.getElementById('scrambleText')
   const originalText = scrambleText?.textContent || ''
-  const scrambleDelay = 2000
   const updateInterval = 50
 
   function scramble() {
