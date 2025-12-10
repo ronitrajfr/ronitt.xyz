@@ -12,14 +12,14 @@ export type Project = z.infer<typeof projectSchema>;
 export async function getProjects(): Promise<Project[]> {
   return [
     {
+      repo: "Ronum",
+      link: "https://ronum.vercel.app/",
+      description: "Enhance your reading experience with Ronum",
+    },
+    {
       repo: "Ayoni",
       link: "https://github.com/ronitrajfr/ayoni",
       description: "web analytics built for modern websites.",
-    },
-    {
-      repo: "rsh",
-      link: "https://github.com/ronitrajfr/rsh",
-      description: "a simple shell made in C from scratch",
     },
     {
       repo: "dns-server",
