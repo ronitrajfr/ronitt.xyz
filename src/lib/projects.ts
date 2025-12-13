@@ -17,6 +17,11 @@ export async function getProjects(): Promise<Project[]> {
       description: "Enhance your reading experience with Ronum",
     },
     {
+      repo: "Betterwrite",
+      link: "https://github.com/ronitrajfr/betterwrite",
+      description: "write better with betterwrite",
+    },
+    {
       repo: "Ayoni",
       link: "https://github.com/ronitrajfr/ayoni",
       description: "web analytics built for modern websites.",
@@ -31,11 +36,7 @@ export async function getProjects(): Promise<Project[]> {
       link: "https://github.com/ronitrajfr/http-server",
       description: "HTTP server implementation handles basic HTTP requests. ",
     },
-        {
-      repo: "Rtop",
-      link: "https://github.com/ronitrajfr/rtop",
-      description: "rtop is alternative to htop(system monitor made in C)",
-    },
+
        
        {
       repo: "Ronis",

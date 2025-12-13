@@ -3,15 +3,15 @@ import vue from "@astrojs/vue";
 import mdx from "@astrojs/mdx";
 import solidJs from "@astrojs/solid-js";
 import sitemap from "@astrojs/sitemap";
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
 import unocss from "unocss/astro";
 // @ts-ignore
 import vesper from "./src/lib/vesper.json";
 
 export default defineConfig({
   site: "https://www.ronitt.xyz/",
-  adapter: vercel(),
-  output: "hybrid",
+  adapter: vercel(),           // ✅ Vercel adapter
+  output: "static",            // ✅ changed from "hybrid"
   integrations: [
     mdx(),
     sitemap(),
@@ -21,10 +21,10 @@ export default defineConfig({
   ],
   prefetch: {
     prefetchAll: true,
-    defaultStrategy: "viewport"
+    defaultStrategy: "viewport",
   },
   server: {
-    port: 6969
+    port: 6969,
   },
   // @ts-expect-error
   markdown: { shikiConfig: { theme: vesper, wrap: true } },
